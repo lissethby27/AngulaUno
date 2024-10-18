@@ -1,0 +1,16 @@
+.fecha-hora-container {
+  text-align: center;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.fecha-hora-container h3 {
+  color: #4CAF50;
+}
+
+.fecha-hora-container p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+

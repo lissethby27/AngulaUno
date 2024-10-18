@@ -1,0 +1,9 @@
+.saludo-container{
+  text-align: center;
+  margin-top: 20px;
+}
+.saludo-container h2{
+  font-size: 24px;
+  color: blueviolet;
+  font-family: Arial, Helvetica, sans-serif;
+}

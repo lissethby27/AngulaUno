@@ -1,0 +1,25 @@
+.temporizador-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkviolet;
+}

@@ -1,0 +1,7 @@
+<p>contador works!</p>
+<div class ='contador-container'>
+  <h2>Hora actual: {{ horaActual | date: 'HH:mm:ss' }}</h2> <!-- Muestra la hora -->
+  <button (click)="detenerReloj()">
+    {{ isRunning ? 'Detener' : 'Reanudar' }} reloj
+  </button>
+</div>

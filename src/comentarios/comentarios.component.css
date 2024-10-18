@@ -1,0 +1,21 @@
+.comentario-container {
+  margin: 20px 0;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}

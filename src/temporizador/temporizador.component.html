@@ -1,0 +1,26 @@
+<p>temporizador works!</p>
+
+<div class="temporizador-container">
+  <h2>Temporizador</h2>
+
+  <!-- Campo de entrada para el tiempo en segundos -->
+  <label >Tiempo en segundos:</label>
+  <input type="number" [(ngModel)]="tiempo" placeholder="Ingresa el tiempo en segundos" />
+
+  <!-- Botón para iniciar la cuenta regresiva -->
+  <button (click)="iniciarTemporizador()">Iniciar</button>
+
+  <!-- Botón para detener la cuenta regresiva -->
+  <button (click)="detenerTemporizador()">Detener</button>
+
+  <!-- Botón para reiniciar el temporizador -->
+  <button (click)="reiniciarTemporizador()">Reiniciar</button>
+
+  <!-- Muestra el tiempo de cuenta regresiva actual -->
+  <div *ngIf="cuentaRegresiva > 0">
+    <h3>Tiempo restante: {{ cuentaRegresiva }} segundos</h3>
+  </div>
+  <div *ngIf="cuentaRegresiva === 0 && intervalo === null">
+    <h3>¡El tiempo ha terminado!</h3>
+  </div>
+</div>

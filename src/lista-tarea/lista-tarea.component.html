@@ -1,0 +1,24 @@
+<p>lista-tarea works!</p>
+<div class="tareas-container">
+  <h2>Lista de Tareas</h2>
+
+  <!-- Campo de entrada para escribir la nueva tarea -->
+  <input type="text" [(ngModel)]="nuevaTarea" placeholder="Escribe una tarea" />
+
+  <!-- Botón para agregar la tarea -->
+  <button (click)="agregarTarea()">Agregar Tarea</button>
+
+  <!-- Botón para alternar la visibilidad de la lista -->
+  <button (click)="alternarVisibilidad()">
+    {{ mostrarTareas ? 'Ocultar Tareas' : 'Mostrar Tareas' }}
+  </button>
+
+  <!-- Lista de tareas, visible solo si mostrarTareas es true -->
+  <ul *ngIf="mostrarTareas">
+    <li *ngFor="let tarea of tareas; let i = index">
+      {{ tarea }}
+      <!-- Botón para eliminar una tarea de la lista -->
+      <button (click)="eliminarTarea(i)">Eliminar</button>
+    </li>
+  </ul>
+</div>

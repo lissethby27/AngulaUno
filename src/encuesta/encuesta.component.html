@@ -1,0 +1,39 @@
+<p>encuesta works!</p>
+<div class="container">
+  <h2>Encuesta Interactiva</h2>
+
+  <!-- Preguntas -->
+  <form *ngIf="!mostrarResumen">
+    <div *ngFor="let pregunta of preguntas" class="pregunta">
+      <h3>{{ pregunta.texto }}</h3>
+      <mat-radio-group [(ngModel)]="pregunta.respuestaSeleccionada">
+        <mat-radio-button
+          *ngFor="let opcion of pregunta.opciones"
+          [value]="opcion"
+        >
+          {{ opcion }}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <button mat-raised-button color="primary" (click)="enviarEncuesta()">
+      Enviar
+    </button>
+    <button mat-stroked-button color="warn" (click)="reiniciarEncuesta()" type="button">
+      Reiniciar
+    </button>
+  </form>
+
+  <!-- Resumen -->
+  <mat-card *ngIf="mostrarResumen" class="resumen">
+    <h2>Resumen de Respuestas</h2>
+    <ul>
+      <li *ngFor="let pregunta of preguntas">
+        <strong>{{ pregunta.texto }}</strong>: {{ pregunta.respuestaSeleccionada || 'Sin respuesta' }}
+      </li>
+    </ul>
+    <button mat-raised-button color="accent" (click)="reiniciarEncuesta()">
+      Volver a la Encuesta
+    </button>
+  </mat-card>
+</div>

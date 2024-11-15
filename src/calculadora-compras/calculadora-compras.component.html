@@ -1,0 +1,36 @@
+<p>calculadora-compras works!</p>
+
+<div class="container">
+  <!-- Formulario para agregar productos -->
+  <form [formGroup]="formulario" (ngSubmit)="agregarProducto()">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Nombre del Producto</mat-label>
+      <input matInput formControlName="nombre" placeholder="Ej: Manzanas" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Precio</mat-label>
+      <input matInput type="number" formControlName="precio" placeholder="Ej: 2.50" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Cantidad</mat-label>
+      <input matInput type="number" formControlName="cantidad" placeholder="Ej: 3" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" [disabled]="formulario.invalid">Añadir Producto</button>
+    <button mat-stroked-button color="warn" type="button" (click)="reiniciar()">Reiniciar</button>
+  </form>
+
+  <!-- Lista de productos -->
+  <div *ngIf="productos.length > 0" class="lista">
+    <h3>Productos Añadidos</h3>
+    <mat-list>
+      <mat-list-item *ngFor="let producto of productos">
+        {{ producto.cantidad }}x {{ producto.nombre }} - {{ producto.precio | currency }} ({{ producto.total | currency }})
+      </mat-list-item>
+    </mat-list>
+    <h3 class="total">Total: {{ totalCompra | currency }}</h3>
+  </div>
+</div>
+

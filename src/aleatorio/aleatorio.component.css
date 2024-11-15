@@ -1,0 +1,38 @@
+.numero-aleatorio-container {
+  text-align: center;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.numero-aleatorio-container h3, h4 {
+  color: #007BFF;
+}
+
+.numero-aleatorio-container input {
+  margin: 10px;
+  padding: 5px;
+  width: 50px;
+  text-align: center;
+}
+
+.numero-aleatorio-container button {
+  padding: 5px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.numero-aleatorio-container button:hover {
+  background-color: #218838;
+}
+
+.numero-aleatorio-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.numero-aleatorio-container li {
+  font-size: 18px;
+  color: #333;
+}

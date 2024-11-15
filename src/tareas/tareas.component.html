@@ -1,0 +1,45 @@
+<p>tareas works!</p>
+
+<div class="container">
+  <!-- Formulario para agregar tareas -->
+  <mat-form-field appearance="outline">
+    <mat-label>Nueva Tarea</mat-label>
+    <input matInput [(ngModel)]="nuevaTarea" />
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="agregarTarea()">Añadir</button>
+
+  <div class="drag-drop-container">
+    <!-- Pendientes -->
+    <div class="lista">
+      <h3>Pendientes</h3>
+      <div cdkDropList [cdkDropListData]="pendientes" (cdkDropListDropped)="moverTarea($event, pendientes)">
+        <mat-card *ngFor="let tarea of pendientes" cdkDrag>{{ tarea }}</mat-card>
+      </div>
+    </div>
+
+    <!-- En Progreso -->
+    <div class="lista">
+      <h3>En Progreso</h3>
+      <div cdkDropList [cdkDropListData]="enProgreso" (cdkDropListDropped)="moverTarea($event, enProgreso)">
+        <mat-card *ngFor="let tarea of enProgreso" cdkDrag>{{ tarea }}</mat-card>
+      </div>
+    </div>
+
+    <!-- Completadas -->
+    <div class="lista">
+      <h3>Completadas</h3>
+      <div cdkDropList [cdkDropListData]="completadas" (cdkDropListDropped)="moverTarea($event, completadas)">
+        <mat-card *ngFor="let tarea of completadas" cdkDrag>{{ tarea }}</mat-card>
+      </div>
+    </div>
+
+    <!-- Zona de Eliminadas -->
+    <div class="lista eliminar">
+      <h3>Eliminar</h3>
+      <div cdkDropList [cdkDropListData]="eliminadas" (cdkDropListDropped)="moverTarea($event, eliminadas)">
+        <mat-card *ngFor="let tarea of eliminadas" cdkDrag>{{ tarea }}</mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+

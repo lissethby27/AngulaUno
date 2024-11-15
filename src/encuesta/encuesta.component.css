@@ -1,0 +1,22 @@
+.container {
+  padding: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pregunta {
+  margin-bottom: 24px;
+}
+
+mat-radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card {
+  margin-top: 24px;
+}
+
+button {
+  margin-right: 8px;
+}

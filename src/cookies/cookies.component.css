@@ -1,0 +1,11 @@
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color:cadetblue;
+  margin-top: 10px;
+}
+h2 {
+  margin-top: 20px;
+  font-size: 24px;
+}

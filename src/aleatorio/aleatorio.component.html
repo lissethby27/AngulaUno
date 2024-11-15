@@ -1,0 +1,20 @@
+<h1>Ejercicio 2: Componente Generador de Números Aleatorios</h1>
+
+<div class="aleatorio-container">
+  <h2>Generador de Números Aleatorios</h2>
+
+  <!-- Campo para ingresar la cantidad de números a generar -->
+  <label for="cantidad">Cantidad de números:</label>
+  <input id="cantidad" type="number" [(ngModel)]="cantidadNumeros" min="1" max="10">
+
+  <!-- Botón para generar los números aleatorios -->
+  <button (click)="generarNumerosAleatorios()">Generar Números</button>
+
+  <!-- Muestra los números generados -->
+  <div *ngIf="numerosGenerados.length > 0">
+    <h4>Números generados:</h4>
+    <ul>
+      <li *ngFor="let numero of numerosGenerados">{{ numero }}</li>
+    </ul>
+  </div>
+</div>

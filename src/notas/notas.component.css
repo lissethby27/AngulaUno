@@ -1,0 +1,57 @@
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Estilos para los formularios de filtro */
+mat-form-field {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilo del botón para agregar estudiante */
+button {
+  margin-top: 20px;
+}
+
+/* Estilos generales */
+mat-select, mat-input {
+  width: 200px;
+}
+
+mat-button {
+  margin-top: 10px;
+}
+
+/* Estilo para el contenedor de la tabla */
+.mat-elevation-z8 {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* Responsividad: Asegúrate de que la tabla se vea bien en dispositivos pequeños */
+@media (max-width: 600px) {
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 4px;
+  }
+
+}

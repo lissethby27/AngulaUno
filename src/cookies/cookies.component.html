@@ -1,0 +1,11 @@
+<h1>Ejercicio 6: Componente Manipulación de Cookies</h1>
+
+<div *ngIf="nombreUsuario">
+  <h2>¡Hola, {{ nombreUsuario }}!</h2>
+  <button (click)="borrarCookie('nombreUsuario')">Borrar Cookie</button>
+</div>
+
+<div *ngIf="!nombreUsuario">
+  <p>No se ha proporcionado un nombre de usuario.</p>
+  <button (click)="solicitarNombre()">Introducir Nombre</button>
+</div>

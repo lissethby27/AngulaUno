@@ -1,0 +1,17 @@
+<p>galeria works!</p>
+
+<div class="container">
+  <mat-form-field appearance="outline">
+    <mat-label>Buscar por descripción</mat-label>
+    <input matInput [ngModel]="filtro"  (input)="filtrarImagenes()">
+  </mat-form-field>
+
+  <mat-grid-list cols="4" rowHeight="150px" gutterSize="10px">
+    <mat-grid-tile *ngFor="let imagen of imagenesFiltradas" (click)="abrirDialog(imagen)">
+      <img [src]="imagen.url" alt="{{ imagen.descripcion }}" class="imagen">
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <button mat-raised-button color="primary" (click)="agregarImagen()">Añadir Imagen</button>
+</div>
+

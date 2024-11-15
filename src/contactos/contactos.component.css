@@ -1,0 +1,19 @@
+.container {
+  padding: 16px;
+  max-width: 800px;
+  margin: auto;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+button {
+  margin-right: 8px;
+}
+
+table {
+  width: 100%;
+  margin-top: 24px;
+}
